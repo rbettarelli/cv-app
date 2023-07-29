@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import Education from "./PreviewEducation";
-import PreviewExp from "./previewExp";
+import Education from "./EducationInfo/PreviewEducation";
+import PreviewExp from "./ExperienceInfo/previewExp";
 import styled from "styled-components";
 import { MdOutlineEmail } from "react-icons/md";
 import { AiOutlinePhone } from "react-icons/ai";

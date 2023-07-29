@@ -1,13 +1,14 @@
+import React, { useState } from "react";
 import CurriculumEdit from "./CurriculumEdit";
 import CurriculumView from "./CurriculumView";
-import styled from "styled-components"
+import styled from "styled-components";
 
-const Container = styled.div `
-display: grid;
-gap: 30px;
-grid-template-columns: repeat(2, 500px);
-justify-content: center;
-`
+const Container = styled.div`
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, 300px);
+  justify-content: center;
+`;
 
 export default function Content({
   onSubmit,
@@ -19,6 +20,8 @@ export default function Content({
   experience,
   education,
 }) {
+
+
   return (
     <Container>
       <CurriculumEdit
@@ -29,8 +32,8 @@ export default function Content({
         onChange={onChange}
         experience={experience}
         education={education}
-        
         onSubmit={onSubmit}
+      
       />
 
       <CurriculumView

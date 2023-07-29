@@ -13,6 +13,7 @@ function App() {
 
 const [experience, setExperience] = React.useState([]);
   const [education, setEducation] = React.useState([]);
+  const [isShown, setIsShown] = React.useState(false)
 
   function addItem(event, itemType) {
     event.preventDefault();
@@ -26,6 +27,7 @@ const [experience, setExperience] = React.useState([]);
 
       let newExperience = { id, position, company, start, end, tasks };
       setExperience([...experience, newExperience]);
+      
     } else if (itemType === "education") {
       const id = uuidv4();
       const course = event.target[0].value;
@@ -60,6 +62,7 @@ const [experience, setExperience] = React.useState([]);
         experience={experience}
         education={education}
         onSubmit={addItem}
+        
         
       />
     </>
