@@ -13,23 +13,20 @@ export default function PreviewExp({
   start,
   end,
   tasks,
+  editExperience
 
 }) {
   
-
-
   return (
     <ExperiencesView>
-      <div className="exp-preview">
+      <div className="exp-preview" id={id} onClick={() => editExperience(id)}>
         <p>
           <strong>{position}</strong>
         </p>
-        <button className="btn btn-primary" id={id}>
-          Edit
-        </button>
+  
         <p>
           <strong>{company}</strong> | {start} -{" "}
-          {!end || end === null ? "Current" : end}
+          { end}
         </p>
         <p>{tasks}</p>
       </div>

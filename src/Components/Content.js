@@ -6,7 +6,7 @@ import styled from "styled-components";
 const Container = styled.div`
   display: grid;
   gap: 30px;
-  grid-template-columns: repeat(2, 300px);
+  grid-template-columns: repeat(2, 500px);
   justify-content: center;
 `;
 
@@ -19,7 +19,12 @@ export default function Content({
   phone,
   experience,
   education,
+  editExperience,
+  experienceToEdit,
+  educationToEdit,
+  editEducation
 }) {
+
 
 
   return (
@@ -33,6 +38,8 @@ export default function Content({
         experience={experience}
         education={education}
         onSubmit={onSubmit}
+        experienceToEdit={experienceToEdit} 
+        educationToEdit={educationToEdit}
       
       />
 
@@ -44,6 +51,8 @@ export default function Content({
         onChange={onChange}
         experience={experience}
         education={education}
+        editExperience={editExperience}
+        editEducation={editEducation}
       />
     </Container>
   );

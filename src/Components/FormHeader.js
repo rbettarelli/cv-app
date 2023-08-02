@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import expandMore from "./Assets/expand-more.png";
 import expandLess from "./Assets/expand-less.png";
 import styled from "styled-components";
-import EducationForm from "./EducationInfo/EducationForm";
+
 
 const FormHeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-itens: center;
+  align-items: center;
+
 `;
 
 const Expand = styled.img`

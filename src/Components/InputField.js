@@ -8,7 +8,7 @@ export default function InputField({
 }) {
 
 
-  console.log()
+
   return (
     <input
       name={name}

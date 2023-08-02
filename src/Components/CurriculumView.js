@@ -31,6 +31,13 @@ const FullName = styled.h2`
   max-width: 90%;
 `;
 
+const FormTitles = styled.h3 `
+
+border-bottom: 2px solid black;
+
+
+`
+
 export default function CurriculumView({
   firstName,
   lastName,
@@ -38,6 +45,8 @@ export default function CurriculumView({
   phone,
   experience,
   education,
+  editExperience,
+  editEducation
 }) {
   return (
     <ViewContainer>
@@ -55,8 +64,8 @@ export default function CurriculumView({
         </p>
       </PersonalInfo>
 
-      <h2> Experience </h2>
-
+     
+     {experience.length > 0 ? <FormTitles>Experience</FormTitles> : ""}
       {experience.map((exp) => {
         return (
           <PreviewExp
@@ -67,18 +76,21 @@ export default function CurriculumView({
             start={exp.start}
             end={exp.end}
             tasks={exp.tasks}
+            editExperience={() => editExperience(exp.id)}
             
           />
         );
       })}
+      {education.length > 0 ? <FormTitles>Education</FormTitles>: ""}
       {education.map((edu) => {
         return (
           <Education
             key={edu.id}
             course={edu.course}
             place={edu.place}
-            startyear={edu.startyear}
+            startyear={edu.startYear}
             graduatedYear={edu.graduatedYear}
+            editEducation={() => editEducation(edu.id)}
           />
         );
       })}
